@@ -1,5 +1,5 @@
 /** String processing exercise 2. */
-public class uniquechars {
+public class uniqueChars {
     public static void main(String[] args) {
         String str = args[0];
         System.out.println(uniqueChars(str));
@@ -12,6 +12,7 @@ public class uniquechars {
      */
     public static String uniqueChars(String s) {
         String res = "";
+        boolean isExist;
         for (int i = 0; i < s.length() ; i++) {
             if (s.charAt(i) != '1') {
                 res = res + s.charAt(i);
