@@ -16,7 +16,6 @@ public class LoanCalc {
         double loan = Integer.parseInt(args[0]);
         double rate = Integer.parseInt(args[1]);
         int n = Integer.parseInt(args[2]);
-        System.out.println(bisectionSolver(loan, rate, n, epsilon));
 
         System.out.println("Loan sum = " + loan + ", interest rate = " + rate + "%, periods = " + n);
 
