@@ -65,7 +65,6 @@ public class LoanCalc {
 
         // Bisection search algorithm
         while (hi - lo > epsilon) {
-            iterationCounter++;
 
             if (endBalance(loan, rate, n, lo) * endBalance(loan, rate, n, mid) > 0) {
                 lo = mid;
