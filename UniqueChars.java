@@ -11,20 +11,18 @@ public class UniqueChars {
      * unless they are space characters.
      */
     public static String uniqueChars(String s) {
-        String res = "";
-        boolean isExist;
-        for (int i = 0; i < s.length() ; i++) {
-            if (s.charAt(i) != '1') {
-                res = res + s.charAt(i);
-            }
-            if (s.charAt(i) != ' ') {
-                for (int j = 1; j < s.length() ; j++) {
-                    if (s.charAt(i) == s.charAt(j)) {
-                        s = s.replace(s.charAt(j), '1');
-                    }
-                }
+        String result = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            char currentChar = s.charAt(i);
+
+            // Check if the character is a space or not already present in the result
+            if (currentChar == ' ' || result.indexOf(currentChar) == -1) {
+                result += currentChar;
             }
         }
-        return res;
+
+        return result;
     }
 }
+
