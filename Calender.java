@@ -1,7 +1,4 @@
-/**
- * Prints the calendars of all the years in the 20th century.
- */
-public class Calendar1 {
+public class Calendar{
     // Starting the calendar on 1/1/1900
     static int dayOfMonth = 1;
     static int month = 1;
@@ -15,14 +12,15 @@ public class Calendar1 {
      * number of Sundays that occurred on the first day of the month during this period.
      */
     public static void main(String[] args) {
-        while (year <= 1999) {
+        int yearInput = Integer.parseInt(args[0]);
+        while (year <= yearInput) {
+            if (year == yearInput) {
                 System.out.println(dayOfMonth + "/" + month + "/" + year + (dayOfWeek == 1 && dayOfMonth == 1 ? " Sunday" : ""));
-            
+            }
             advance();
 
 
         }
-        System.out.println("During the 20th century, 172 Sundays fell on the first day of the month");
 
     }
 
