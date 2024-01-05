@@ -19,13 +19,13 @@ public class LowerCase {
             // Check if the character is an upper-case letter
             if (s.charAt(i) > 64 && s.charAt(i) < 91) {
                 // Convert to lower-case using ASCII values
-                res += (char) (s.charAt(i) - 32);
+                res += (char) (s.charAt(i) + 32);
             } else {
                 res += s.charAt(i);
             }
         }
 
-        return s;
+        return res;
     }
 
 }
