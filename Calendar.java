@@ -5,7 +5,6 @@ public class Calendar{
     static int year = 1900;
     static int dayOfWeek = 2;     // 1.1.1900 was a Monday
     static int nDaysInMonth = 31; // Number of days in January
-    static int numOfSundays = 0;
 
     /**
      * Prints the calendars of all the years in the 20th century. Also prints the
@@ -15,7 +14,7 @@ public class Calendar{
         int yearInput = Integer.parseInt(args[0]);
         while (year <= yearInput) {
             if (year == yearInput) {
-                System.out.println(dayOfMonth + "/" + month + "/" + year + (dayOfWeek == 1 && dayOfMonth == 1 ? " Sunday" : ""));
+                System.out.println(dayOfMonth + "/" + month + "/" + year + (dayOfWeek == 1 &&  ? " Sunday" : ""));
             }
             advance();
 
@@ -30,7 +29,6 @@ public class Calendar{
     // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
     private static void advance() {
         if (dayOfWeek == 1 && dayOfMonth == 1) {
-            numOfSundays++;
         }
         nDaysInMonth = nDaysInMonth(month, year);
         if (nDaysInMonth == dayOfMonth) {
