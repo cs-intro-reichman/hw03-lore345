@@ -14,7 +14,7 @@ public class Calendar{
         int yearInput = Integer.parseInt(args[0]);
         while (year <= yearInput) {
             if (year == yearInput) {
-                System.out.println(dayOfMonth + "/" + month + "/" + year + (dayOfWeek == 1 &&  ? " Sunday" : ""));
+                System.out.println(dayOfMonth + "/" + month + "/" + year + (dayOfWeek == 1  ? " Sunday" : ""));
             }
             advance();
 
