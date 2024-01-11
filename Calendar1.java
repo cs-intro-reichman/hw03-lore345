@@ -16,13 +16,13 @@ public class Calendar1 {
      */
     public static void main(String[] args) {
         while (year <= 1999) {
-                System.out.println(dayOfMonth + "/" + month + "/" + year + (dayOfWeek == 1 && dayOfMonth == 1 ? " Sunday" : ""));
-            
+            System.out.println(dayOfMonth + "/" + month + "/" + year + (dayOfWeek == 1 && dayOfMonth == 1 ? " Sunday" : ""));
+
             advance();
 
 
         }
-        System.out.println("During the 20th century, 172 Sundays fell on the first day of the month");
+        System.out.println("During the 20th century, " + numOfSundays + " Sundays fell on the first day of the month");
 
     }
 
